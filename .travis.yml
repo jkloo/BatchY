@@ -1,0 +1,13 @@
+language: python
+python:
+  - "2.7"
+install: 
+  - "make install"
+  - "pip install coveralls"
+  - "pip install yaml"
+
+script:
+  - "make test"
+
+after_success:
+    coveralls
