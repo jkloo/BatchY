@@ -4,4 +4,28 @@
 
 A batch editing package and Sublime Text 2 plugin for YAML files.
 
+##Installation
 
+Clone this repo into a location on your file system.
+
+    git clone https://github.com/jkloo/BatchY.git
+
+Change directories to the cloned location.
+
+    cd BatchY
+
+Install the package.
+
+    make install
+
+###Testing the Installation
+The testing configuration uses pep8 for static analysis. Install this program using pip.
+
+    pip install pep8
+
+Run the package test suite as well as static analysis using
+
+    make test
+
+
+## Usage
