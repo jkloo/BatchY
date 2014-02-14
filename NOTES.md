@@ -28,7 +28,7 @@ These 'files' will be used in the following example usages:
     # allow directory-scoping with --dirs [DIRS, ...]
 
 ## Context Find-Replace
-    
+
     batchy find dog
     >> jeff.yml, dave.yml
 
@@ -54,11 +54,10 @@ Enable the user to update the value of a key in all files
     # over write the key value pair
     batchy update (key) (value)
 
-
 ## View Coalescence 
 
 Enable the user to view portions of multiple YAML files at once.
-    
+
     batchy view
     >> 
     --- #jeff.yml
