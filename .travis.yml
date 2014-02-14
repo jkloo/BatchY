@@ -4,7 +4,6 @@ python:
 install: 
   - "make install"
   - "pip install coveralls"
-  - "pip install yaml"
 
 script:
   - "make test"
