@@ -7,16 +7,14 @@ The purpose of batchy is to allow simultaneous edits to be made across multiple 
 # Usages
 These 'files' will be used in the following example usages:
 
-> jeff.yml
-
+    # jeff.yml
     pets:
         - cat
         - dog
         - fish
     car: camry
 
-> dave.yml
-
+    # dave.yml
     pets:
         - dog
         - bird
