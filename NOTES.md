@@ -2,7 +2,7 @@
 
 > This file contains the initial thoughts behind the creation of BatchY
 
-The purpose of batchy is to allow simultaneous edits to be made across multiple YAML files.
+The purpose of batchy is to allow simultaneous edits to be made across multiple YAML files. These feature may not be developed yet.
 
 # Usages
 These 'files' will be used in the following example usages:

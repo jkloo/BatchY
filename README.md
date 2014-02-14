@@ -29,3 +29,5 @@ Run the package test suite as well as static analysis using
 
 
 ## Usage
+
+See NOTES.md for some example usage.
