@@ -50,6 +50,6 @@ def generate_args(args=None):
     return args
 
 
-def main():
-    args = generate_args()
+def main(args=None):
+    args = generate_args(args)
     args.func(args)
