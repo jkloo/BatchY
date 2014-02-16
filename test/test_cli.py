@@ -14,7 +14,7 @@ class TestMain(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_no_args(self):
+    def test__cli__no_args(self):
         self.assertRaises(SystemExit, main, [])
 
 
@@ -25,10 +25,10 @@ class TestBatchyFind(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_no_args(self):
+    def test__cli__batchy_find__no_args(self):
         self.assertRaises(SystemExit, main, ['find'])
 
-    def test_no_flags(self):
+    def test__cli__batchy_find__no_flags(self):
         self.assertIs(None, main(['find', 'a']))
 
 
@@ -39,10 +39,10 @@ class TestBatchyUpdate(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_no_args(self):
+    def test__cli__batchy_update__no_args(self):
         self.assertRaises(SystemExit, main, ['update'])        
 
-    def test_no_flags(self):
+    def test__cli__batchy_update__no_flags(self):
         self.assertIs(None, main(['update', 'a', 'b']))        
 
 
@@ -53,5 +53,5 @@ class TestBatchyView(unittest.TestCase):
     def tearDown(self):
         pass
 
-    def test_no_args(self):
+    def test__cli__batchy_view__no_args(self):
         self.assertIs(None, main(['view']))
