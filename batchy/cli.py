@@ -4,9 +4,21 @@ import argparse
 
 from . import CLI
 from .utils import _list_files
-from .find import _batchy_find
-from .update import _batchy_update
-from .view import _batchy_view
+from .find import batchy_find
+from .update import batchy_update
+from .view import batchy_view
+
+
+def _batchy_find(args):
+    return batchy_find(args.pattern, args.keys, args.replace, args.files)
+
+
+def _batchy_update(args):
+    return batchy_update(args.key, args.value, args.files, add=args.add, append=args.append)
+
+
+def _batchy_view(args):
+    return batchy_view(args.files, args.keys)
 
 
 def _generate_args(args=None):

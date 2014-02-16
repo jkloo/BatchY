@@ -1,5 +1,5 @@
 #!/usr/bin/python
 
 
-def _batchy_update(args):
+def batchy_update(key, value, files, add=False, append=False):
     print('BatchY update!')

@@ -1,5 +1,5 @@
 #!/usr/bin/python
 
 
-def _batchy_find(args):
+def batchy_find(pattern, keys, replace, files):
     print('BatchY find!')
