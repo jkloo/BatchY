@@ -1,7 +1,6 @@
 # BatchY
 [![Build Status](https://travis-ci.org/jkloo/BatchY.png?branch=master)](https://travis-ci.org/jkloo/BatchY)
-[![Coverage Status](https://coveralls.io/repos/jkloo/BatchY/badge.png)](https://coveralls.io/r/jkloo/BatchY)
-
+[![Coverage Status](https://coveralls.io/repos/jkloo/BatchY/badge.png?branch=master)](https://coveralls.io/r/jkloo/BatchY?branch=master)
 A batch editing package and Sublime Text 2 plugin for YAML files.
 
 ##Installation
