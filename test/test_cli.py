@@ -54,4 +54,7 @@ class TestBatchyView(unittest.TestCase):
         pass
 
     def test__cli__batchy_view__no_args(self):
-        self.assertIs(None, main(['view']))
+        try:
+            main(['view'])
+        except SystemExit as e:
+            self.fail(str(e))

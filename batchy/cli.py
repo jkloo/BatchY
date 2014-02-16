@@ -2,20 +2,11 @@
 
 import argparse
 
-from batchy import CLI
+from . import CLI
 from .utils import _list_files
-
-
-def _batchy_find(args):
-    print('BatchY find!')
-
-
-def _batchy_update(args):
-    print('BatchY update!')
-
-
-def _batchy_view(args):
-    print('BatchY view!')
+from .find import _batchy_find
+from .update import _batchy_update
+from .view import _batchy_view
 
 
 def _generate_args(args=None):
@@ -54,4 +45,4 @@ def _generate_args(args=None):
 
 def main(args=None):
     args = _generate_args(args)
-    args.func(args)
+    return args.func(args)
