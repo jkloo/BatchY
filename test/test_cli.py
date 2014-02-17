@@ -7,7 +7,7 @@ from . import TESTFILES
 from batchy.cli import main
 
 
-class TestMain(unittest.TestCase):
+class TestCLIMain(unittest.TestCase):
     def setUp(self):
         pass
 
@@ -18,7 +18,7 @@ class TestMain(unittest.TestCase):
         self.assertRaises(SystemExit, main, [])
 
 
-class TestBatchyFind(unittest.TestCase):
+class TestCLIBatchyFind(unittest.TestCase):
     def setUp(self):
         pass
 
@@ -32,7 +32,7 @@ class TestBatchyFind(unittest.TestCase):
         self.assertIs(None, main(['find', 'a']))
 
 
-class TestBatchyUpdate(unittest.TestCase):
+class TestCLIBatchyUpdate(unittest.TestCase):
     def setUp(self):
         pass
 
@@ -43,10 +43,10 @@ class TestBatchyUpdate(unittest.TestCase):
         self.assertRaises(SystemExit, main, ['update'])        
 
     def test__cli__batchy_update__no_flags(self):
-        self.assertIs(None, main(['update', 'a', 'b']))        
+        self.assertTrue(isinstance(main(['update', 'a', 'b']), list))
 
 
-class TestBatchyView(unittest.TestCase):
+class TestCLIBatchyView(unittest.TestCase):
     def setUp(self):
         pass
 

@@ -33,24 +33,24 @@ class TestListFiles(unittest.TestCase):
         pass
 
     def test__utils__list_files__empty_lists(self):
-        files = _list_files([], [])
+        files = _list_files()
         files.sort()
         self.assertEqual(files, TESTFILES)
 
     def test__utils__list_files__given_dirs(self):
-        files = _list_files([], ['files/people'])
+        files = _list_files(dirs=['files/people'])
         files.sort()
         self.assertEqual(files, TESTFILES_PEOPLE)
 
     def test__utils__list_files__given_files(self):
         focus = ['files/people/bob.yml', 'files/people/jeff.yml']
-        files = _list_files(focus, [])
+        files = _list_files(files=focus)
         files.sort()
         self.assertEqual(files, focus)
 
     def test__utils__list_files__given_files_and_dirs(self):
         focus = ['files/people/bob.yml', 'files/people/jeff.yml']
-        output = _list_files(focus, ['files/animals'])
+        output = _list_files(files=focus, dirs=['files/animals'])
         output.sort()
         files = focus + TESTFILES_ANIMALS
         files.sort()

@@ -7,7 +7,7 @@ import yaml
 from . import FILETYPES, RESERVED_FILE_KEY
 
 
-def _list_files(files, dirs):
+def _list_files(files=[], dirs=[]):
     def _walk(d):
         output = []
         if os.path.isdir(d):
@@ -33,7 +33,17 @@ def _read_files(files):
     docs = []
     for f in files:
         with open(f, 'r') as g:
-            docs.append(yaml.load(g))
+            doc = yaml.load(g)
             # keep a reference to the file the data came from
-            docs[-1][RESERVED_FILE_KEY] = f
+            doc[RESERVED_FILE_KEY] = f
+            docs.append(doc)
     return docs
+
+
+def _write_files(docs):
+    for doc in docs:
+        fname = doc.get(RESERVED_FILE_KEY, None)
+        if fname:
+            del doc[RESERVED_FILE_KEY]
+            with open(fname, 'w') as f:
+                yaml.dump(doc, f, default_flow_style=False)
