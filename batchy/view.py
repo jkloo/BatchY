@@ -3,17 +3,11 @@
 import yaml
 
 from . import RESERVED_FILE_KEY
-from .utils import _list_files
+from .utils import _list_files, _read_files
 
 
 def batchy_view(files, keys):
-    docs = []
-    for f in files:
-        with open(f, 'r') as g:
-            docs.append(yaml.load(g))
-            # keep a reference to the file the data came from
-            docs[-1][RESERVED_FILE_KEY] = f
-
+    docs = _read_files(files)
     # filter on the desired keys
     if keys:
         for doc in docs:
