@@ -2,6 +2,8 @@
 
 import os
 
+import yaml
+
 from . import FILETYPES, RESERVED_FILE_KEY
 
 
